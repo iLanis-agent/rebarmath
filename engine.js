@@ -40,7 +40,7 @@ function stockTruth(run, spacing, pieceM, stockM) {
   var p = _run(run, spacing), n = _n(p), l = _d(pieceM, _PIECE, 2, 10, 1200), k = _d(stockM, _STOCK, 2, 100, 1200);
   if (l > k) throw new Error(_LONG);
   var per = Math.floor(k / l), sb = Math.floor((n + per - 1) / per), off = sb * k - n * l;
-  return "The " + _bars(n) + " of " + _dec(l, 2) + " m cut " + per + " to a " + _dec(k, 2) + " m stock bar, so they take " + sb + (sb === 1 ? " stock bar" : " stock bars") + ", with " + (off === 0 ? "no offcut." : _dec(off, 2) + " m of offcut in total.");
+  return "The " + _bars(n) + " of " + _dec(l, 2) + " m cut " + per + " to a " + _dec(k, 2) + " m stock bar, so it takes " + sb + (sb === 1 ? " stock bar" : " stock bars") + ", with " + (off === 0 ? "no offcut." : _dec(off, 2) + " m of offcut in total.");
 }
 function massTruth(run, spacing, pieceM, labelMass) {
   var p = _run(run, spacing), n = _n(p), l = _d(pieceM, _PIECE, 2, 10, 1200), m = _d(labelMass, _MASS, 2, 1, 1000);
