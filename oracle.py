@@ -47,7 +47,7 @@ def stock(run, sp, piece, stk):
         sb += 1; room = k
         while left > 0 and room >= l: room -= l; left -= 1
         off += room
-    return f"The {bars(n)} of {txt(l/100,2)} m cut {per} to a {txt(k/100,2)} m stock bar, so they take {sb} stock bar{'' if sb == 1 else 's'}, with " + ("no offcut." if off == 0 else f"{txt(off/100,2)} m of offcut in total.")
+    return f"The {bars(n)} of {txt(l/100,2)} m cut {per} to a {txt(k/100,2)} m stock bar, so it takes {sb} stock bar{'' if sb == 1 else 's'}, with " + ("no offcut." if off == 0 else f"{txt(off/100,2)} m of offcut in total.")
 def mass(run, sp, piece, lm):
     r, cm, s, n, last = run_in(run, sp)
     l = dec(piece, PIECE, 2, "0.1", "12"); m = dec(lm, MASS, 2, "0.01", "10")
